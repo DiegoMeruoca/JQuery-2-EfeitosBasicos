@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery</title>
+		<script src="c:/jquery/jquery-3.3.1.min.js"></script>
+		<script>
+			$(document).ready(function(){//Função executada apos carregar o documento
+				$("#bt1").click(function(){//Função exec qnd o user clica no bt1
+					$("#imagem").animate({width:"400px", height: "400px"});//Efeito animate
+				});
+				$("#bt2").click(function(){//Função exec qnd o user clica no bt2
+					$("#imagem").animate({width:"100px", height:"100px"});//Efeito animate
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<button id="bt1">Aumentar</button>
+		<button id="bt2">Diminuir</button>
+		<br><br>
+		<img id="imagem" src="imagem.jpg" height="100px" width="100px"></img>
+	</body>
+</html>

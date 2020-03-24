@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery</title>
+		<script src="c:/jquery/jquery-3.3.1.min.js"></script>
+		<script>
+			$(document).ready(function(){//Função executada apos carregar o documento
+				$("#bt1").click(function(){//Função exec qnd o user clica no bt1
+					$("#caixa").animate({left:"400px", top: "400px"});//Efeito animate
+				});
+				$("#bt2").click(function(){//Função exec qnd o user clica no bt2
+					$("#caixa").animate({left:"10px"}).animate({top:"50px"});//Efeito animate
+				});//Repare que neste caso o animate esta dividido em duas animações separadas.
+			});
+		</script>
+		<!--Estilização da div caixa com css com fundo vermelho, 100 px de altura e largura,
+		com posicionamento absolute, a 50px do topo e 10 px da esquerda-->
+		<style>
+			#caixa{ background:#f00; height:100px; width:100px;	
+					position:absolute; top:50px;left:10px;}
+		</style>
+	</head>
+	<body>
+		<button id="bt1">Deslocar</button>
+		<button id="bt2">Voltar</button>
+		<div id="caixa"></div>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery</title>
+		<script src="c:/jquery/jquery-3.3.1.min.js"></script>
+		<script>
+			$(document).ready(function(){//Função executada apos carregar o documento
+				$("#bt1").click(function(){//Função exec qnd o user clica no bt1
+					$("#cx1").fadeToggle(600);//Executa o fade em 0.6 segundo
+					$("#cx2").fadeToggle(900);//Executa o fade em 0.9 segundo
+					$("#cx3").fadeToggle(1200);//Executa o fade em 1.2 segundos
+					});
+			});
+		</script>
+		<!--Estilização da div com css com 100 px de altura e largura e posicionamento absoluto-->
+		<style>
+			div{height:100px; width:100px; position:absolute;}
+		</style>
+	</head>
+	<body>
+		<button id="bt1">Ocultar/Mostrar</button>
+		<br><br>
+		<br><br>
+		<div id="cx1" style="background:#f00; top:40px"></div>
+		<div id="cx2" style="background:#0f0; top:150px"></div>
+		<div id="cx3" style="background:#00f; top:260px"></div>
+	</body>
+</html>

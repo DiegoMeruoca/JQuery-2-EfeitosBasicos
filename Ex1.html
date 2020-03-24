@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery</title>
+		<script src="c:/jquery/jquery-3.3.1.min.js"></script>
+		<script>
+			$(document).ready(function(){//Função executada apos carregar o documento
+				$("#bt1").click(function(){//Função exec qnd o user clica no bt1
+					$("div").show(1000, msg);//Metodo que mostra a div, no callback chama a msg
+				});
+				$("#bt2").click(function(){//Função exec qnd o user clica no bt2
+					$("div").hide(1000, msg);//Metodo que oculta a div, no callback chama a msg
+				});
+			});
+			function msg(){//Função para exibir a mensagem
+				alert("Efeito terminado");
+			};
+		</script>
+		<!--Estilização da div com css com fundo cinza, borda de 2 pixels soida e preta
+			borda com cantos arredondados de 5px e espaço entre a borda e o conteúdo de 10 pixels-->
+		<style>
+			div{ background-color:#eee; 
+				border:2px solid #000;
+				border-radius:5px;
+				padding:10px;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="bt1">Mostrar</button>
+		<button id="bt2">Ocultar</button><br><br>
+		<div>Desenvolvimento Web<br>Aprendendo jQuery</div>
+	</body>
+</html>

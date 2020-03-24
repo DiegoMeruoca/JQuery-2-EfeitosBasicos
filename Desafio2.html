@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>Desafio2</title>
+		<script src="c:/jquery/jquery-3.3.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("img").fadeTo(500,0.3);
+				$("img").mouseenter(function(){//Cria a função a ser executada quando o cursor entra no elemento de imagem
+					$(this).clearQueue().fadeTo(500,1);//Aplica o fadeTo 100% na imagem que o mouse esta sobre 
+				}).mouseleave(function(){
+					$(this).fadeTo(500,0.4);//Aplica o fadeTo 40% na imagem que o mouse acabou de deixar
+				});
+			});	
+		</script>
+		<style>
+			img{height:300px; width:300px; position:relative;}
+		</style>
+	</head>
+	<body>
+		<img id="imagem1" src="imagem.jpg"></img>
+		<img id="imagem2" src="imagem2.jpg"></img>
+		<img id="imagem3" src="imagem3.jpg"></img>
+		<img id="imagem4" src="imagem4.jpg"></img>
+	</body>
+</html>
